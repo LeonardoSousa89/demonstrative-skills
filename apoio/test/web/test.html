@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="search">
+    <button onclick="found(Event)">find</button>
+    
+    <script>
+        function found() {
+            let search = document.getElementById('search').value
+
+            fetch('http://localhost:3003/',{
+            method:'GET',
+            status:200
+        }).then(res => res.json())
+          .then(res => {
+              res.map(e => {
+                if(search === e.name){
+                    console.log(e.id)
+                    console.log(e.name)
+                    console.log(e.job)
+                    console.log(e.salary)
+                    console.log(e.sector)
+                }else{
+                    console.log([])
+                }
+              })
+          }).catch(e => console.log('err'))
+
+          clear()
+        }
+    function clear() {
+        let search = document.getElementById('search')
+        search.value = ''
+    }
+</script>
+</body>
+</html>

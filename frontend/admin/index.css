@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Unna:wght@700&display=swap");
+body {
+  margin: 0;
+  background-color: #192C54;
+  color: whitesmoke;
+  font-family: 'Unna', serif;
+  overflow: hidden; }
+  @media screen and (max-device-width: 1023px) {
+    body {
+      overflow: scroll; } }
+
+.dock {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20vh 75vh 5vh;
+  grid-template-areas: "header  header" "main     main" "footer footer"; }
+  @media screen and (max-device-width: 1023px) and (orientation: portrait) {
+    .dock {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 10vh 85vh 5vh;
+      grid-template-areas: "header  header" "main     main" "footer footer"; }
+      .dock header strong {
+        font-size: 1.5em; }
+      .dock main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0.5em; }
+        .dock main #id,
+        .dock main #name,
+        .dock main #job,
+        .dock main #salary,
+        .dock main #label,
+        .dock main #inputGroupSelect01 {
+          font-size: 2.5em; }
+        .dock main #send,
+        .dock main #clear,
+        .dock main #edition,
+        .dock main #getId,
+        .dock main #update,
+        .dock main #delete,
+        .dock main #nmode {
+          margin: 0 0.1em;
+          font-size: 3em; }
+      .dock footer {
+        overflow: hidden;
+        display: flex; }
+        .dock footer i {
+          display: none; }
+        .dock footer #homeArea {
+          height: 100%;
+          width: 20%;
+          text-align: center;
+          font-size: x-large; } }
+  @media screen and (max-device-width: 1023px) and (orientation: landscape) {
+    .dock {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 10vh 165vh 5vh;
+      grid-template-areas: "header  header" "main     main" "footer footer"; }
+      .dock main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0.5em; }
+        .dock main #id,
+        .dock main #name,
+        .dock main #job,
+        .dock main #salary,
+        .dock main #label,
+        .dock main #inputGroupSelect01 {
+          font-size: 2em; }
+        .dock main #send,
+        .dock main #clear,
+        .dock main #edition,
+        .dock main #getId,
+        .dock main #update,
+        .dock main #delete,
+        .dock main #nmode {
+          margin: 0 0.1em;
+          font-size: 2em; } }
+  .dock header {
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(63deg, #192C54 45%, #061F40 55%);
+    text-decoration: double;
+    padding: 1em;
+    color: #9CA1A6;
+    font-size: 3.4em; }
+  .dock main {
+    grid-area: main;
+    background: #E9E9E9; }
+  .dock footer {
+    grid-area: footer;
+    background: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center; }
+    .dock footer i {
+      margin-right: 5px; }
+    .dock footer strong {
+      margin-left: 32em;
+      background-color: #192C54;
+      color: whitesmoke;
+      padding: 0.2em; }
+      .dock footer strong:hover {
+        color: #9CA1A6;
+        cursor: pointer; }
+  .dock header, .dock main, .dock footer {
+    padding: 0.5em; }
+  .dock main, .dock footer {
+    color: #011126; }
+  .dock main #id,
+  .dock main #name,
+  .dock main #job,
+  .dock main #salary,
+  .dock main #label,
+  .dock main #inputGroupSelect01 {
+    margin: 1em 0; }
+  .dock main #id {
+    width: 10vw; }
+  .dock main #normal, .dock main #edit {
+    margin-bottom: 0.8em; }
+  .dock main #send-mesg {
+    font-weight: bold;
+    width: 20vw; }
+  .dock main #wrongsend-mesg {
+    font-weight: bold;
+    width: 25vw; }
+  .dock main #update-mesg, .dock main #delete-mesg {
+    font-weight: bold;
+    width: 25vw; }

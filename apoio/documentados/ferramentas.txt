@@ -1,0 +1,13 @@
+
+https://color.adobe.com/pt/explore?page=4
+https://www.toptal.com/designers/htmlarrows/symbols/
+https://api.jquery.com/
+https://getbootstrap.com
+https://fontawesome.com/v5.15/icons?d=gallery&p=2&c=design
+https://sass-lang.com/
+https://www.typescriptlang.org/
+https://app.netlify.com/
+https://id.heroku.com/login
+https://devcenter.heroku.com/articles/heroku-postgresql
+https://devcenter.heroku.com/articles/heroku-postgresql#connecting-in-node-js
+

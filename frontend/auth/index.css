@@ -1,0 +1,158 @@
+body {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  background-color: #192C54;
+  color: #E9E9E9; }
+  @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; } }
+  @media screen and (max-device-width: 1024px) and (max-device-height: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; } }
+  @media screen and (max-device-width: 1023px) and (orientation: landscape) {
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; } }
+  @media screen and (max-device-width: 1023px) and (orientation: portrait) {
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 3em; }
+      body #alerting, body #empty, body #nofetch {
+        height: 3em;
+        width: 80vw; }
+      body .alert {
+        font-size: 3em; } }
+  body .dock {
+    background-color: #E9E9E9;
+    margin: 25vh;
+    border-radius: 6px;
+    height: 250px;
+    width: 700px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "img form" "img form"; }
+    @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+      body .dock {
+        height: 450px;
+        width: 1260px; } }
+    @media screen and (max-device-width: 1024px) and (max-device-height: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+      body .dock {
+        height: 450px;
+        width: 95vw; } }
+    @media only screen and (max-device-width: 1023px) and (orientation: portrait) {
+      body .dock {
+        display: none; } }
+    @media only screen and (max-device-width: 1023px) and (orientation: landscape) {
+      body .dock {
+        margin: 5vh;
+        height: 75vh;
+        width: 95vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center; }
+        body .dock .img {
+          display: none; }
+        body .dock .form {
+          height: 100%;
+          width: 100%; }
+        body .dock .form_camp {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center; } }
+    @media only screen and (max-device-width: 1023px) and (orientation: portrait) {
+      body .dock {
+        height: 40vh;
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center; }
+        body .dock .img {
+          display: none; }
+        body .dock .form {
+          height: 100%;
+          width: 100%; }
+        body .dock .form_camp {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center; }
+        body .dock .title {
+          display: none; }
+        body .dock .login {
+          padding: 1em;
+          font-weight: bold; } }
+    body .dock .img {
+      grid-area: img; }
+    body .dock .form {
+      grid-area: form; }
+    body .dock #hr {
+      height: 100%;
+      width: 100%; }
+    body .dock .form_camp {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      body .dock .form_camp .title {
+        color: #141F3C;
+        margin-bottom: 0.5em;
+        font-size: X-large; }
+      body .dock .form_camp .login {
+        color: #4C5A75; }
+      body .dock .form_camp #admin {
+        padding: 0.3em;
+        width: 90%;
+        outline: none;
+        border: solid 1px rgba(0, 0, 0, 0.3);
+        margin: 0.1em 0; }
+        body .dock .form_camp #admin:hover {
+          border: solid 1px #141F3C;
+          box-shadow: 0px 0px 3px; }
+      body .dock .form_camp #pass {
+        padding: 0.3em;
+        width: 90%;
+        outline: none;
+        border: solid 1px rgba(0, 0, 0, 0.3);
+        margin: 0.1em 0; }
+        body .dock .form_camp #pass:hover {
+          border: solid 1px #141F3C;
+          box-shadow: 0px 0px 3px; }
+      body .dock .form_camp #button {
+        font-weight: bold;
+        margin-top: 0.5em;
+        width: 90%;
+        color: #E9E9E9;
+        background-color: #141F3C;
+        border: none;
+        outline: none;
+        padding: 0.2em; }
+        body .dock .form_camp #button:hover {
+          color: #E7DAD1; }
+  body #empty, body #alerting, body #nofetch {
+    width: 60%;
+    font-weight: bold;
+    text-align: center;
+    font-size: large;
+    margin: 0 25vh; }
+  body #nofetch {
+    cursor: pointer; }

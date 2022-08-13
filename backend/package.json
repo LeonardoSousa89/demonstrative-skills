@@ -1,0 +1,25 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./index.js",
+    "int": "knex init",
+    "tbl": "knex migrate:make create_table_people",
+    "lt": "knex migrate:latest",
+    "rlbck": "knex migrate:rollback"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "consign": "^0.1.6",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "knex": "^0.95.8",
+    "nodemon": "^2.0.12",
+    "pg": "^8.7.1"
+  }
+}

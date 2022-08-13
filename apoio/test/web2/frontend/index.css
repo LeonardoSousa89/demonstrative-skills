@@ -1,0 +1,30 @@
+body{
+    background-color:black;
+    color:whitesmoke;
+    overflow:hidden;
+}
+form{
+    display:flex;
+    flex-direction:column;
+}
+.name, .email, .login{
+    height:2em;
+    width: 12em;
+}
+#name, #email, #login{
+    height:2em;
+    width: 12.5em; 
+    margin-bottom:4em;
+}
+#refresh{
+    height:2em;
+    width: 12.5em; 
+    margin-bottom:1em;
+}
+button{
+    cursor:pointer;
+}
+.area{
+    display:flex;
+    flex-direction:row;
+}

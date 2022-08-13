@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Unna:wght@700&display=swap');
+ $s-color:#011126;
+ $ms-color:#061F40;
+ $l-color:#fff;
+ $smoke:whitesmoke;
+ $grey:#9CA1A6;
+ $val:0.5em;
+ $center:center;
+ $empty-val:none;
+ @mixin display($scr){
+    display:$scr;
+ }
+ @mixin area($areas){
+     grid-area:$areas;
+ }
+ @mixin d_grid($g_display,$columns,$rows,$g_areas){
+    display: $g_display;
+    grid-template-columns:$columns;
+    grid-template-rows:$rows;
+    grid-template-areas:$g_areas;
+ }
+ @mixin d_flex($f_display,$direction,$justify,$align){
+    display:$f_display;
+    flex-direction:$direction;
+    justify-content:$justify;
+    align-items:$align;
+ }
+ @mixin size($font){
+     font-size:$font;
+ }
+ @mixin s_size($htg,$wdt){
+   height:$htg;
+   width:$wdt;
+}
+ @function calculation($value, $factor){
+     @return ($value * $factor);
+ }
+ %test{
+    border:solid 1pc red;    
+ }
+ body{
+    margin:0;
+    background-color:$s-color;
+    color:$l-color;
+
+    font-family: 'Unna', serif;
+    .experience{
+        display:none;
+    }
+
+    @media screen 
+    and(max-device-width:1023px)
+    and(orientation:portrait){
+        @include s_size(100%,100%);
+        .experience{
+            display:flex;
+            flex-direction:column-reverse;
+            padding:3em;
+        }
+    }
+    @media screen 
+    and(max-device-width:1023px)
+    and(orientation:landscape){
+        @include s_size(100%,100%);
+        overflow:scroll;
+    }
+ }
+header{
+    @include area(header);
+    @include d_flex(flex,row,space-between,$center);
+    background: linear-gradient(63deg, $s-color 45%, $ms-color 55%);
+    text-decoration: double;
+    padding: 1em;
+    color:$grey;
+        strong{
+            @include size(3.4em);
+        }
+        h1{
+            border-radius:50%;
+            padding:$val;
+            background-color:$s-color;
+
+            &:hover{
+                background-color:$grey;
+                cursor:pointer;
+                color:$smoke;
+            }
+        }
+       
+}
+aside{
+    @include area(aside);
+    @include d_flex(flex,column,space-around,start);
+    padding:$val;
+    #icon{
+        margin:$val $val;
+    }
+    #search{
+        background-color:$s-color;
+        border:$empty-val;
+        outline:$empty-val;
+        color:$l-color;
+        box-shadow: 1px 3px 3px $smoke;
+        padding: 0.2em;
+        width: 100%;
+    }
+}
+main{
+    @include area(main);
+    padding:calculation($val,2);
+    background-color:$grey;
+    overflow-y:scroll;
+    overflow-x:hidden;
+
+    table{
+        width:100%;
+        box-shadow:0px 0px 7px $smoke;
+    }
+    table thead, table tbody{
+        text-align:$center;
+    }
+    table thead tr th{
+        @include size(large);
+        padding:1em;
+        border:solid 0.1pc $s-color;
+        background-color:$s-color;
+    }
+    table tbody tr td{
+        padding:1em;
+        border:solid 0.1pc $s-color;
+        background-color:$ms-color;
+    }
+    #dataSearched{
+        margin:1em 0;
+    }
+    #noDataTable{
+        margin:1em 0;
+        height:10em;
+        width:100%;
+        font-weight:bold;
+        font-size:xx-large;
+        background:$ms-color;
+        text-align:$center;
+        @include d_flex(flex,row,center,center);
+        box-shadow:0px 0px 7px $smoke;
+    }
+}
+footer{
+    @include area(footer);
+    background-color:#F2F2F2;
+    color:#011126;
+    padding:0.2em;
+    @include d_flex(flex,row,flex-start,$center);
+        i{
+            margin-right:5px; 
+        }
+        strong{
+            margin-left:18em; 
+            background-color: $s-color;
+            color:$smoke;
+            padding:0.2em;
+                &:hover{
+                    color:$grey;
+                    cursor:pointer;
+                }
+        }
+}
+.d-dev{
+    @include d_grid( grid,
+                     220px 1fr,
+                     30vh 65vh 5vh,
+                     'aside  header'
+                     'aside    main'
+                     'aside  footer');
+    @media screen 
+    and(max-device-width:1023px)
+    and(orientation:portrait){
+        display:none;    
+    }
+    @media screen 
+    and(max-device-width:1023px)
+    and(orientation:landscape){
+        header{
+            @include size(x-large);
+        }
+        aside{
+            padding:1em;
+            background-color:$grey;
+            @include size(xx-large);
+            #icon{
+                display:none;
+            }
+            #search{
+                width:60vw;
+                padding:0.7em; 
+            }
+        }
+        footer{
+            @include size(large);
+            display:flex;
+            flex-direction:row;
+            justify-content:flex-start;
+        }
+        display:grid;
+        @include d_grid( grid,
+                         1fr,
+                         40vh 25vh 95vh 5vh,
+                         'header  header'
+                         'aside    aside'
+                         'main      main'
+                         'footer   footer');
+       
+    }
+ }
+
+
+
+
+
+
+
+
+

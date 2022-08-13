@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demonstrative &reg;</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="d-dev">
+
+        <header>
+            <strong>WORKER'S AREA&reg;</strong> 
+            <div class="alert alert-light" id="alert" role="alert">
+                    click in this button if you whish exit!
+              </div>
+            <h1 class="sair">&#10006;</h1> 
+        </header>
+        <aside>
+            <i class="fas fa-home" id="icon">home</i>
+            <input type="text" id="search" placeholder="search">
+        </aside>
+
+        <main>
+            <table id="dataSearched">
+                <thead>
+                  <tr>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>job</th>
+                    <th>sector</th>
+                    <th>salary</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td id="idDbSc"></td>
+                    <td id="nameDbSc"></td>
+                    <td id="jobDbSc"></td>
+                    <td id="sectorDbSC"></td>
+                    <td id="salaryDbSc"></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table id="dataStandard">
+                <thead>
+                  <tr>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>job</th>
+                    <th>sector</th>
+                    <th>salary</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td id="idDb"></td>
+                    <td id="nameDb"></td>
+                    <td id="jobDb"></td>
+                    <td id="sectorDb"></td>
+                    <td id="salaryDb"></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div id="noDataTable">
+                   I'm sorry ocurred an error with the server!
+               </div>
+        </main>
+
+        <footer>
+            <i class="fas fa-copyright"></i> 
+            <i>2021 worker's system have all rights reserved.</i>
+            <strong id="admArea">admin</strong>
+        </footer>
+    </div>
+
+    <div class="experience">
+        <h1>Please from your better experience,
+           rotate your device to render the table data.
+        </h1>
+        <img src="../assets/rotate.gif" alt="from better experiece, please rotate your device">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>  
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="index.js"></script> 
+</body>
+</html>

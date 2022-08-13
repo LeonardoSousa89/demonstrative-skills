@@ -1,0 +1,36 @@
+https://pt.stackoverflow.com/questions/386448/resolu%C3%A7%C3%A3o-m%C3%A1xima-ideal-para-exibir-conte%C3%BAdo-em-modo-mobile
+https://medium.com/@tassiogoncalvesg/entenda-de-uma-vez-por-todas-como-utilizar-o-height-100-no-css-6d72914a6748
+https://pt.stackoverflow.com/questions/337316/como-fazer-para-que-o-texto-se-adapte-ao-tamanho-da-div
+https://www.luis.blog.br/font-size-tamanho-da-letra-fonte-em-css.html
+
+
+
+
+media de propor��o em dispositivos:
+
+  estes valores estudados
+  s�o m�dias aproximadas,
+  para que eu tenha uma
+  base em valores na resolu��o 
+  de interfaces dos dispositivos
+  com o intuito de aplicar t�cnicas
+  de responsividade mais r�pido,
+  mais produtivo e mais especializado.*
+
+
+ (   ++  ) a mais ou acima
+ (   --  ) a menos ou para baixo
+ (   -   ) entre
+ (   ~   ) aproximadamente
+  
+  desktop/tv:
+	  1024px~ ++
+
+  tablet:
+	  768px~ - 1024px~
+
+  celulares:
+	  240px~ - 768px~
+
+  wearables:
+  	  218px~ - 281px~
